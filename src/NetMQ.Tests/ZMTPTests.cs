@@ -10,7 +10,7 @@ using NetMQ.Monitoring;
 using NetMQ.Sockets;
 using Xunit;
 
-#if NET47
+#if NET47 || NET471
 using ZeroMQ;
 #endif
 
@@ -156,7 +156,7 @@ namespace NetMQ.Tests
             }
         }
 
-#if NET47
+#if NET47 || NET471
         [Fact]
         public void WithLibzmq()
         {
